@@ -5,6 +5,7 @@ import PlusIcon from './assets/plus.svg?react';
 import { Icon } from "./components/Icon";
 import { Badge } from "./components/Bage";
 import { Button } from "./components/Button";
+import { ButtonIcon } from "./components/ButtonIcon";
 
 
 export function App() {
@@ -31,6 +32,12 @@ export function App() {
         </Button>
       </div>
 
+      <div className="flex gap-2">
+        <ButtonIcon icon={TrashIcon} variant='primary'/>
+        <ButtonIcon icon={TrashIcon} variant='secondary'/>
+        <ButtonIcon icon={TrashIcon} variant='tertiary'/>
+
+      </div>
 
     </div>
     
