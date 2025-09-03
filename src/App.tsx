@@ -1,7 +1,10 @@
 import { Text } from "./components/Text";
 import TrashIcon from './assets/trash.svg?react';
 import SpinnerIcon from './assets/spinner.svg?react';
+import PlusIcon from './assets/plus.svg?react';
 import { Icon } from "./components/Icon";
+import { Badge } from "./components/Bage";
+import { Button } from "./components/Button";
 
 
 export function App() {
@@ -13,9 +16,24 @@ export function App() {
 
       <div className="flex gap-1">
         <Icon svg={TrashIcon} className="fill-pink-base"/>
+        <Icon svg={PlusIcon} className="fill-green-base"/>
         <Icon svg={SpinnerIcon} className="fill-blue-base" animate/>
       </div>
+
+      <div className="flex gap-3">
+        <Badge variant='secondary'> 2</Badge>
+        <Badge variant='primary'> 2 de 5</Badge>
+      </div>    
+
+      <div>
+        <Button variant={'primary'} size={'md'} icon={PlusIcon}>
+          Nova Tarefa
+        </Button>
+      </div>
+
+
     </div>
+    
     
   )
 }
