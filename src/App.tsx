@@ -6,11 +6,12 @@ import { Icon } from "./components/Icon";
 import { Badge } from "./components/Bage";
 import { Button } from "./components/Button";
 import { ButtonIcon } from "./components/ButtonIcon";
+import { InputText } from "./components/InputText";
 
 
 export function App() {
   return (
-    <div className="grid gap-3">
+    <div className="grid gap-3 px-5">
       <div className="flex flex-col gap-1">
         <Text variant="body-md-bold">Todo List</Text>
       </div>
@@ -36,7 +37,10 @@ export function App() {
         <ButtonIcon icon={TrashIcon} variant='primary'/>
         <ButtonIcon icon={TrashIcon} variant='secondary'/>
         <ButtonIcon icon={TrashIcon} variant='tertiary'/>
+      </div>
 
+      <div>
+        <InputText/>
       </div>
 
     </div>
