@@ -2,6 +2,7 @@ import  React from "react"
 import { Icon } from "./Icon"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Text } from "./Text"
+import { Skeleton } from "./Skeleton"
 
 export const buttonVariants = cva('flex items-center justify-center cursor pointer transition rounded-lg group gap-2',{
   variants:{
@@ -52,6 +53,7 @@ interface ButtonProps
   extends Omit<React.ComponentProps<'button'>, 'size' | 'disabled'>,
     VariantProps<typeof buttonVariants> {
   icon?: React.ComponentProps<typeof Icon>['svg']
+  loading?: boolean
 }
 
 export function Button({
@@ -61,8 +63,20 @@ export function Button({
   className,
   children,
   icon: IconComponent ,
+  loading,
   ...props
 }: ButtonProps){
+  if(loading){
+    return(
+      <Skeleton
+        className={buttonIconVariants({
+          variant,
+          size,
+          className
+        })}
+      />
+    )
+  }
   return(
     <button 
       className={buttonVariants({variant, size, disabled, className})} 
