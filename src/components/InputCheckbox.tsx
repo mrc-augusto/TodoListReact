@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import  React from "react";
 import { Icon } from "./Icon";
-import CheckIcon from '../assets/check.svg?react';
+import CheckIcon from '../assets/icons/check.svg?react';
 import { Skeleton } from "./Skeleton";
 
 export const inputCheckboxWrapperVariants = cva(
